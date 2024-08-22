@@ -1,18 +1,14 @@
 package golog
 
-import "fmt"
-
-var (
-	Info *log.Logger
-	Debug *log.Logeger
+import (
+	"fmt"
 )
 
-func init(){
-	Info = log.New(os.Sterr, "INFO\t", log.LstdFlags)
-	Debug = log.New(os.Stderr, "DEBUG\t", log.LstdFlags)
+func Info(message string) {
+	fmt.Println("INFO: ", message)
 }
 
-func Log(message string) {
-	fmt.Println("GOLOG: ", message)
+func Debug(message string) {
+	fmt.Println("DEBUG: ", message)
 }
 
